@@ -3,7 +3,7 @@ Contributors: tillkruess
 Donate link: http://tillkruess.com/donations/
 Tags: paste, plain text, plaintext, editor, tinymce, mce, formatting
 Requires at least: 3.2
-Tested up to: 3.7
+Tested up to: 3.8
 Stable tag: 1.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
