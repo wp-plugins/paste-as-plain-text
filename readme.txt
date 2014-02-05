@@ -1,6 +1,6 @@
 === Paste as Plain Text ===
 Contributors: tillkruess
-Donate link: http://tillkruess.com/donations/
+Donate link: http://till.kruss.me/donations/
 Tags: paste, plain text, plaintext, editor, tinymce, mce, formatting
 Requires at least: 3.2
 Tested up to: 3.8
