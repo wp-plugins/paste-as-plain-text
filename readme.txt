@@ -3,8 +3,8 @@ Contributors: tillkruess
 Donate link: http://till.kruss.me/donations/
 Tags: paste, plain text, plaintext, editor, tinymce, mce, formatting
 Requires at least: 3.2
-Tested up to: 3.8
-Stable tag: 1.0
+Tested up to: 3.9
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,6 +27,17 @@ For detailed installation instructions, please read the [standard installation p
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Added support for WordPress 3.9's TinyMCE 4.
+
 = 1.0 =
 
 * Initial release
+
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+
+This version adds support for WordPress 3.9's TinyMCE 4
