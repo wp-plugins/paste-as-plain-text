@@ -3,7 +3,7 @@
 Plugin Name: Paste as Plain Text
 Plugin URI: http://wordpress.org/plugins/paste-as-plain-text/
 Description: Forces the WordPress editor to paste everything as plain text.
-Version: 1.0
+Version: 1.0.1
 Author: Till Krüss
 Author URI: http://till.kruss.me/
 License: GPLv3
