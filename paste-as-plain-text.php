@@ -10,27 +10,9 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-/**
- * Copyright 2014 Till Krüss  (http://till.kruss.me/)
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
- * @package Paste as Plain Text
- * @copyright 2014 Till Krüss
- */
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-class TK_PasteAsPlainText {
+class PasteAsPlainText {
 
 	function __construct() {
 
@@ -40,14 +22,14 @@ class TK_PasteAsPlainText {
 
 	function init() {
 
-		add_filter( 'tiny_mce_before_init', array( $this, 'forcePasteAsPlainText' ) );
-		add_filter( 'teeny_mce_before_init', array( $this, 'forcePasteAsPlainText' ) );
-		add_filter( 'teeny_mce_plugins', array( $this, 'loadPasteInTeeny' ) );
-		add_filter( 'mce_buttons_2', array( $this, 'removePasteAsPlainTextButton' ) );
+		add_filter( 'tiny_mce_before_init', array( $this, 'force_paste_as_plain_text' ) );
+		add_filter( 'teeny_mce_before_init', array( $this, 'force_paste_as_plain_text' ) );
+		add_filter( 'teeny_mce_plugins', array( $this, 'load_paste_plugin' ) );
+		add_filter( 'mce_buttons_2', array( $this, 'remove_button' ) );
 
 	}
 
-	function forcePasteAsPlainText( $mceInit ) {
+	function force_paste_as_plain_text( $mceInit ) {
 
 		global $tinymce_version;
 
@@ -61,13 +43,13 @@ class TK_PasteAsPlainText {
 		return $mceInit;
 	}
 
-	function loadPasteInTeeny( $plugins ) {
+	function load_paste_plugin( $plugins ) {
 
-		return array_merge( $plugins, (array) 'paste' );
+		return array_merge( $plugins, array( 'paste' ) );
 
 	}
 
-	function removePasteAsPlainTextButton( $buttons ) {
+	function remove_button( $buttons ) {
 
 		if( ( $key = array_search( 'pastetext', $buttons ) ) !== false ) {
 			unset( $buttons[ $key ] );
@@ -79,4 +61,4 @@ class TK_PasteAsPlainText {
 
 }
 
-new TK_PasteAsPlainText();
+new PasteAsPlainText();
